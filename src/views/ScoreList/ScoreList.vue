@@ -5,12 +5,12 @@
       <span class="testName">{{testType}}</span>
       <p class="examSubject">
         <span>考试学科：</span>
-        <span v-for="subject in subjects" :key="subject">{{subject}} </span>
+        <!-- <span v-for="(item, index) in subject" :key="index">{{item}} </span> -->
       </p>
     </div>
     <div class="listBody">
       <div v-for="item in scoreList" :key="item.stuId">
-        <van-cell :value="'总分:'+ item.total +'分'" is-link :to="'/scoreDetail?stuId=' + item.stuId" class="cellStyle">
+        <van-cell :value="'总分:'+ item.total +'分'" is-link :to="'/scoreDetail/' + item.stuId" class="cellStyle">
           <template slot="title">
             <img slot="icon"  class="listImg" src="../../assets/image/3.jpg">
             <span class="custom-title">{{item.name}}</span>
@@ -27,12 +27,12 @@ export default {
   data () {
     return {
       testType: '半期测验',
-      subjects: ['语文', '数学', '英语'],
+      subjects: ['语文', '数学', '英语']
     }
   },
   created() {
     // 异步获取成绩列表
-    this.$store.dispatch('getScoreList')
+    this.$store.dispatch('getScoreList', this.$route.params.testId)
   },
   methods: {
   },

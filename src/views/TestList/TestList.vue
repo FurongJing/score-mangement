@@ -6,8 +6,8 @@
       <div class="slogan">每一次考试都是自我的一次审视</div>
     </div>
     <div class="listBody">
-      <div v-for="item in testList" :key="item.testId" class="itemStyle"> 
-        <van-cell :title="item.testName" is-link value="查看详情" :to="'/scoreList'"> </van-cell>
+      <div v-for="(item) in testList" :key="item.testId" class="itemStyle"> 
+        <van-cell :title="item.testName" is-link value="查看详情" :to="'/scoreList/' + item.testId"> </van-cell>
       </div>
     </div>
   </div>
@@ -21,6 +21,12 @@ export default {
   },
   computed: {
     ...mapState(['testList'])
+  },
+  methods: {
+    // 进入对应的成绩列表页面
+    toScoreList (index) {
+      console.log(this.testList[index])
+    }
   }
 }
 </script>

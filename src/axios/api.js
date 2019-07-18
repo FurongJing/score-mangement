@@ -1,4 +1,9 @@
+/**
+ * 发送请求
+ */
 import axios from 'axios'
+// import service from './request'
+
 
 export default function ajax(url='', data={}, type='GET') {
     return new Promise(function(resolve, reject) {
@@ -14,7 +19,7 @@ export default function ajax(url='', data={}, type='GET') {
                 dataStr = dataStr.substring(0, dataStr.lastIndexOf('&'))
                 url = url + '?' + dataStr
             }
-            console.log("请求的url:", url)
+            console.log(data)
             promise = axios.get(url)
         } else { // 发送post请求
             promise = axios.post(url, data)
@@ -28,7 +33,6 @@ export default function ajax(url='', data={}, type='GET') {
             if (code === 0) {
                 console.log("获取数据失败")
             }else if(code === 1){
-                console.log("获取数据成功（包括空数据。只要是正确的拉取数据，都返回此值）")
                 resolve(response.data.data)
             }else if(code === 2) {
                 console.log("当前用户token过期 ")

@@ -5,76 +5,78 @@
             {
                 "testId": 1,
                 "testName": "中期测验",
-                "subject": ["语文", "数学", "英语"]
+                "subject": ["语文", "数学", "英语"],
+                "scoreList": [
+                    {
+                        "stuId": 1,
+                        "name": "李冰",
+                        "avatar": "../../assets/image/2.jpg",
+                        "testId": 1,
+                        "total": 292,
+                        "scoreDetail": {
+                            "chinese": 92,
+                            "math": 100,
+                            "english": 100
+                        }
+                    },
+                    {
+                        "stuId": 2,
+                        "name": "七七",
+                        "avatar": "../../assets/image/3.jpg",
+                        "testId": 1,
+                        "total": 289,
+                        "scoreDetail": {
+                            "avatar": "../../assets/image/3.jpg",
+                            "testId": 1,
+                            "total": 289
+                        }
+                    },
+                    {
+                        "stuId": 3,
+                        "name": "糊糊",
+                        "avatar": "../../assets/image/4.jpg",
+                        "testId": 1,
+                        "total": 296,
+                        "scoreDetail": {
+                            "avatar": "../../assets/image/4.jpg",
+                            "testId": 1,
+                            "total": 296
+                        }
+                    }
+                ]
             },
             {
                 "testId": 2,
                 "testName": "期末测验",
-                "subject": ["语文", "数学", "英语", "体育"]
-            }
-        ],
-        "scoreList": [
-            {
-                "stuId": 1,
-                "name": "李冰",
-                "avatar": "../../assets/image/2.jpg",
-                "testId": 1,
-                "total": 292
-            },
-            {
-                "stuId": 2,
-                "name": "七七",
-                "avatar": "../../assets/image/3.jpg",
-                "testId": 1,
-                "total": 289
-            },
-            {
-                "stuId": 3,
-                "name": "糊糊",
-                "avatar": "../../assets/image/4.jpg",
-                "testId": 1,
-                "total": 296
-            },
-            {
-                "stuId": 4,
-                "name": "小花",
-                "avatar": "../../assets/image/5.jpg",
-                "testId": 2,
-                "total": 242
-            }
-        ],
-        "scoreDetail": [
-            {
-                "stuId": 1,
-                "name": "李冰",
-                "chinese": 92,
-                "math": 100,
-                "english": 100,
-                "total": 292
-            },
-            {
-                "stuId": 2,
-                "name": "七七",
-                "chinese": 99,
-                "math": 91,
-                "english": 99,
-                "total": 289
-            },
-            {
-                "stuId": 3,
-                "name": "糊糊",
-                "chinese": 98,
-                "math": 100,
-                "english": 98,
-                "total": 296
-            },
-            {
-                "stuId": 4,
-                "name": "小花",
-                "chinese": 81,
-                "math": 81,
-                "english": 80,
-                "total": 242
+                "subject": ["语文", "数学", "英语", "体育"],
+                "scoreList": [
+                    {
+                        "stuId": 1,
+                        "name": "李冰",
+                        "avatar": "../../assets/image/2.jpg",
+                        "testId": 2,
+                        "total": 388,
+                        "scoreDetail": {
+                            "chinese": 99,
+                            "math": 91,
+                            "english": 99,
+                            "physical": 100
+                        }
+                    },
+                    {
+                        "stuId": 4,
+                        "name": "小花",
+                        "avatar": "../../assets/image/5.jpg",
+                        "testId": 2,
+                        "total": 342,
+                        "scoreDetail": {
+                            "chinese": 81,
+                            "math": 81,
+                            "english": 80,
+                            "physical": 100
+                        }
+                    }
+                ]
             }
         ]
     }, 

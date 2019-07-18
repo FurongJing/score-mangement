@@ -14,37 +14,41 @@
       </div>
     </div>
     <div class="scoreBody">
-      <div v-for="item in scoreDetail" :key="item.stuId">
-        <div class="listItem">
-          <!-- 若总分需要计算的话，写到计算属性中 -->
-          <div class="course">总分</div>
-          <div class="score">{{item.total}}分</div>
-        </div>
-        <div class="listItem">
-          <div class="course">语文</div>
-          <div class="score">{{item.chinese}}分</div>
-        </div>
-        <div class="listItem">
-          <div class="course">数学</div>
-          <div class="score">{{item.math}}分</div>
-        </div>
-        <div class="listItem">
-          <div class="course">英语</div>
-          <div class="score">{{item.english}}分</div>
-        </div>
+      <div class="listItem">
+        <!-- 若总分需要计算的话，写到计算属性中 -->
+        <div class="course">总分</div>
+        <div class="score">{{total}}分</div>
       </div>
-   </div>
+      <div class="listItem">
+        <div class="course">语文</div>
+        <div class="score">{{scoreDetail.chinese}}分</div>
+      </div>
+      <div class="listItem">
+        <div class="course">数学</div>
+        <div class="score">{{scoreDetail.math}}分</div>
+      </div>
+      <div class="listItem">
+        <div class="course">英语</div>
+        <div class="score">{{scoreDetail.english}}分</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import {mapState} from 'vuex'
 export default {
+  data()  {
+    return {
+      // scoreList: [], // 成绩列表
+      // scoreDetail: {} // 学生详细成绩
+    }
+  },
   created() {
-    this.$store.dispatch('getScoreDetail', 1)
+    this.$store.dispatch('getScoreDetail', {"testId": "1", "stuId": this.$route.params.stuId})
   },
   computed: {
-    ...mapState(['scoreDetail'])
+    ...mapState(['total', 'scoreDetail'])
   }
 }
 </script>
